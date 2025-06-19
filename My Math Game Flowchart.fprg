@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="2231290"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-04-21 04:34:42 pm"/>
+        <attribute name="created" value="MjIzMTI5MDtQRTIwMy0yOTsyMDIzLTA0LTE5OzA1OjQ2OjA4IHBtOzIxNTc="/>
+        <attribute name="edited" value="MjIzMTI5MDtQRTIwMy0yOTsyMDIzLTA0LTIxOzEyOjQ0OjUyIHBtOzM7MjI1NQ=="/>
+        <attribute name="edited" value="MjIzMTI5MDtQRTIwNC0wMzsyMDIzLTA0LTIxOzA0OjM0OjQyIHBtOzM7MjI0Nw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declaring variables "/>
+            <declare name="Total" type="Integer" array="False" size=""/>
+            <declare name="Correct" type="Integer" array="False" size=""/>
+            <declare name="Attempts" type="Integer" array="False" size=""/>
+            <declare name="Num1" type="Integer" array="False" size=""/>
+            <declare name="Num2" type="Integer" array="False" size=""/>
+            <declare name="Num3" type="Integer" array="False" size=""/>
+            <declare name="Answer" type="Integer" array="False" size=""/>
+            <comment text="Output: Math Game asks user to &quot;Make a Question&quot;"/>
+            <output expression="&quot;Make a question&quot;" newline="True"/>
+            <comment text="Process: The calculation"/>
+            <assign variable="Total" expression="Num1 + Num2 * Num3"/>
+            <comment text="Formula of correct answer"/>
+            <comment text="User inputs the answer"/>
+            <input variable="Answer"/>
+            <comment text="Process: If Player answer is equivalent to the total meaning correct "/>
+            <if expression="Answer == Total">
+                <then>
+                    <output expression="Correct +1" newline="True"/>
+                    <comment text="Correct count 1 "/>
+                    <output expression="Total" newline="True"/>
+                    <comment text="Answer label shows Total"/>
+                </then>
+                <else>
+                    <comment text="Message box pops up to try again "/>
+                    <output expression="&quot;Try Again&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="Attempts + 1" newline="True"/>
+            <comment text="Incorrect answer then attempts counts 1"/>
+        </body>
+    </function>
+</flowgorithm>
